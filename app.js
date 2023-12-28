@@ -44,14 +44,17 @@
 // const sat = "sat";
 // const sun = "sun";
 
-//const dayOfWeek = mon + tue + wed + thu + fri + sat + sun;
+// const dayOfWeek = mon + tue + wed + thu + fri + sat + sun;
 
-const dayOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// const dayOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 // const nonsense = [1,  2, "hello" , false , null , true , undefined , "mayu"];
 
-console.log(dayOfWeek[4]);
+// console.log(dayOfWeek[4]);
 
-dayOfWeek.push("sun");
+// dayOfWeek.push("sun");
 
-console.log(dayOfWeek);
+// console.log(dayOfWeek);
+
+// const toBuy = ["potato", "tomato", "pizza"];
+// toBuy.push("kimbab");
