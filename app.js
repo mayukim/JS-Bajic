@@ -181,3 +181,66 @@
 // const pwResult = calculator.power(dResult, mResult);
 
 // console.log(pwResult);
+
+//2.13
+
+// const age = prompt("How old are you?");
+// //prompt 값을 입력받을 때 까지 JS를 정지시킴, 사용하지 않음, CSS 적용 불가, string으로 받음
+// // type of 타입 출력 명령
+// //plaseInt string number로 바꾸기, stringdl 문자가 입력되면 NaN, 타입 변환
+// console.log(age, parseInt(age));
+
+// const age = parseInt(prompt("How old are you?"));
+
+// console.log(age);
+
+//2.14
+
+// const age = parseInt(prompt("How old are you?"));
+// //isNaN 주어진 인자가 NaN인지 판별함, 결과는 boolean을 반환함
+
+// if (isNaN(age)) {
+//     console.log("Please write a number");
+// } else {
+//     console.log("Thank you for Writing your age.");
+// }
+
+// //2.15
+
+// const age = parseInt(prompt("How old are you?"));
+
+// if (isNaN(age) || age < 0) {
+//     console.log("Please write a real positive number"); // 연산자 || 하나 이상 참이면 참
+// } else if (age < 18) {
+//     //if문의 조건문이 거짓일 때 확인하는 다음 조건문
+//     console.log("You are too young"); // 참일때 실행할 코드
+// } else if (age >= 18 && age <= 50) {
+//     // 연산자 && 둘다 참이어야 참
+//     // 모든 조건이 거짓일 때 실행
+//     console.log("You can drink"); // 실행할 코드
+// } else if (age > 50 && age <= 80) {
+//     // 모든 조건이 거짓일 때 실행
+//     console.log("You should exercise"); // 실행할 코드
+// } else if (age > 80) {
+//     // 모든 조건이 거짓일 때 실행
+//     console.log("You can do whatever you want"); // 실행할 코드
+// }
+
+// 2.16
+
+const age = parseInt(prompt("How old are you?"));
+
+if (isNaN(age) || age < 0) {
+    console.log("Please write a real positive number");
+} else if (age < 18) {
+    console.log("You are too young");
+} else if (age >= 18 && age <= 50) {
+    console.log("You can drink");
+} else if (age > 50 && age <= 80) {
+    console.log("You should exercise");
+} else if (age === 100) {
+    // ==은 데이터의 값만 보고 비교를 하지만 ===은 데이터의 타입도 봄, 더욱 엄격한 비교
+    console.log("wow you are wise");
+} else if (age > 80) {
+    console.log("You can do whatever you want");
+}
