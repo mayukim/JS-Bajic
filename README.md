@@ -4,8 +4,6 @@
 
 ## 2.0번 강의
 
----
-
 -   브라우저 -> HTML -> CSS, JS
     -   브라우저는 HTML을 실행시키고 HTML은 CSS, JS를 불러옴
 -   **alert("");** //알림창 띄우기
@@ -27,15 +25,11 @@ alert("hi"); //알림창에 hi 띄우기
 
 ## 2.1번 강의
 
----
-
 -   자바스크립트는 데이터 타입을 알아서 인식함
 
 -   데이터 타입에는 number(integer, float), string 등이 있음
 
 ## 2.2번 강의
-
----
 
 -   **console.log();** // 콘솔에 값이나 연산 띄우기
 
@@ -66,8 +60,6 @@ console.log("hello " + myName); // "hello" 와 myName(="mayu") 의 합 출력
 ```
 
 ## 2.3번 강의
-
----
 
 -   **_변수 선언(variable)_**
 
@@ -103,8 +95,6 @@ console.log("your new name is " + myName);
 
 ## 2.4번 강의
 
----
-
 -   **_데이터 타입_**
 
     -   **Boolean**
@@ -137,8 +127,6 @@ console.log(something); // something 출력, 값이 없으므로 undefined 출�
 ```
 
 ## 2.5번 강의
-
----
 
 -   **const 리스트명 = [요소들];** //리스트, array, 배열 : 각 요소들은 데이터 타입 상관없이 정의 가능, 대괄호 사용, 요소들은 쉼표로 분리
 -   **console.log(리스트명);** // 리스트를 출력함
@@ -177,8 +165,6 @@ toBuy.push("kimbab"); // 리스트 toBuy 에 "kimbab" 을 추가함
 ```
 
 ## 2.6번 강의
-
----
 
 **object**
 
@@ -469,7 +455,6 @@ if (isNaN(age) || age < 0) {
 } else if (age > 50 && age <= 80) {
     console.log("You should exercise");
 } else if (age === 100) {
-    // ==은 데이터의 값만 보고 비교를 하지만 ===은 데이터의 타입도 봄, 더욱 엄격한 비교
     console.log("wow you are wise");
 } else if (age > 80) {
     console.log("You can do whatever you want");

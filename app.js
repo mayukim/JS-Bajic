@@ -1,4 +1,8 @@
+// 2.0
+
 // alert("hi");
+
+// 2.2
 
 // console.log(54545454);
 
@@ -16,6 +20,8 @@
 // console.log(a * b);
 // console.log(a / b);
 // console.log("hello " + myName);
+
+//2.3
 
 // const a = 5;
 // const b = 2;
@@ -59,7 +65,7 @@
 // const toBuy = ["potato", "tomato", "pizza"];
 // toBuy.push("kimbab");
 
-//2.6
+// 2.6
 
 // const playerName = "mayu";
 // const playerPoints = 123456;
@@ -83,16 +89,16 @@
 
 // player.lastName = "potato";
 
-//2.7
+// 2.7
 
-//function 계속 반복해서 쓸 수 있는 코드 조각, 코드 캡슐화 여러번 실행
-//argument funtion을 실행하는 동안 funtion에게 정보를 보낼 수 있는 방법
+// function 계속 반복해서 쓸 수 있는 코드 조각, 코드 캡슐화 여러번 실행
+// argument funtion을 실행하는 동안 funtion에게 정보를 보낼 수 있는 방법
 // function sayHello() {
 //     console.log("Hello my name is");
 // }
 // sayHello("mayu");
 
-//2.8
+// 2.8
 // 괄호 안에 변수명을 넣어 정보를 받음, 이 변수들은 함수 안에만 존재, 데이터를 보내지 않으면 undefined가 정의됨, 선언된 데이터 순서대로 변수에 정의됨
 
 // function sayHello(nameOfPerson, age) {
@@ -182,7 +188,7 @@
 
 // console.log(pwResult);
 
-//2.13
+// 2.13
 
 // const age = prompt("How old are you?");
 // //prompt 값을 입력받을 때 까지 JS를 정지시킴, 사용하지 않음, CSS 적용 불가, string으로 받음
@@ -194,7 +200,7 @@
 
 // console.log(age);
 
-//2.14
+// 2.14
 
 // const age = parseInt(prompt("How old are you?"));
 // //isNaN 주어진 인자가 NaN인지 판별함, 결과는 boolean을 반환함
@@ -212,35 +218,29 @@
 // if (isNaN(age) || age < 0) {
 //     console.log("Please write a real positive number"); // 연산자 || 하나 이상 참이면 참
 // } else if (age < 18) {
-//     //if문의 조건문이 거짓일 때 확인하는 다음 조건문
-//     console.log("You are too young"); // 참일때 실행할 코드
+//     console.log("You are too young");
 // } else if (age >= 18 && age <= 50) {
-//     // 연산자 && 둘다 참이어야 참
-//     // 모든 조건이 거짓일 때 실행
-//     console.log("You can drink"); // 실행할 코드
+//     console.log("You can drink");
 // } else if (age > 50 && age <= 80) {
-//     // 모든 조건이 거짓일 때 실행
-//     console.log("You should exercise"); // 실행할 코드
+//     console.log("You should exercise");
 // } else if (age > 80) {
-//     // 모든 조건이 거짓일 때 실행
-//     console.log("You can do whatever you want"); // 실행할 코드
+//     console.log("You can do whatever you want");
 // }
 
 // 2.16
 
-const age = parseInt(prompt("How old are you?"));
+// const age = parseInt(prompt("How old are you?"));
 
-if (isNaN(age) || age < 0) {
-    console.log("Please write a real positive number");
-} else if (age < 18) {
-    console.log("You are too young");
-} else if (age >= 18 && age <= 50) {
-    console.log("You can drink");
-} else if (age > 50 && age <= 80) {
-    console.log("You should exercise");
-} else if (age === 100) {
-    // ==은 데이터의 값만 보고 비교를 하지만 ===은 데이터의 타입도 봄, 더욱 엄격한 비교
-    console.log("wow you are wise");
-} else if (age > 80) {
-    console.log("You can do whatever you want");
-}
+// if (isNaN(age) || age < 0) {
+//     console.log("Please write a real positive number");
+// } else if (age < 18) {
+//     console.log("You are too young");
+// } else if (age >= 18 && age <= 50) {
+//     console.log("You can drink");
+// } else if (age > 50 && age <= 80) {
+//     console.log("You should exercise");
+// } else if (age === 100) {
+//     console.log("wow you are wise");
+// } else if (age > 80) {
+//     console.log("You can do whatever you want");
+// }
