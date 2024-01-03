@@ -244,3 +244,40 @@
 // } else if (age > 80) {
 //     console.log("You can do whatever you want");
 // }
+
+// 3.1
+
+// const title = document.getElementById("title");
+
+// console.dir(title);
+
+// title.innerText = "Got you!";
+
+// console.dir(title.id);
+// console.dir(title.className);
+
+//3.2
+
+// const hellos = document.getElementsByClassName("hello");
+
+// console.log(hellos);
+
+// const title = document.getElementsByTagName("h1");
+
+// console.log(title);
+
+//const title = document.querySelector(".hello h1");//css 방식, 값이 없으면 null, 부합하는 객체가 여러개면 그중 첫번째 것을 가져옴
+
+// querySelectorAll 은 조건에 부합하는 모든 객체를 가져옴
+
+//console.log(title);
+
+//3.3
+
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    console.log("title was clicked!");
+}
+
+title.addEventListener("click", handleTitleClick);

@@ -76,7 +76,10 @@ console.log("hello " + myName); // "hello" 와 myName(="mayu") 의 합 출력
         -   데이터가 바뀌지 않을 것이라고 예상 할 수 있음
         -   대부분 const 사용
 
-    -   var 변수명 = 값; // variable, 제한은 없지만 보호받을 수 없음, **_사용하지 말 것_**, 예전 자바스크립트 언어
+    -   var 변수명 = 값;
+        -   variable, 제한은 없지만 보호받을 수 없음
+        -   **_사용하지 말 것_**
+        -   예전 자바스크립트 언어
 
 예제 :
 
@@ -463,3 +466,71 @@ if (isNaN(age) || age < 0) {
 if ((a && b) || (c && d) || x || y) {
 }
 ```
+
+## 3.0번 강의
+
+자바스크립트는 html에 접근하고 읽을 수 있다
+
+document.title = "hi"; // JS는 html과 연결되어있음
+
+## 3.1번 강의
+
+<h1 class = "hello" id="title">Grab me!</h1> // classname 은 "hello", id 는 "title"
+
+const title = document.getElementById("title"); //html에서 id 가 title인 element 값을 가져와 변수 title 에 정의한다
+
+console.dir(title); //title 의 전체 요소 출력
+
+title.innerText = "Got you!"; //html 에서 id 가 title인 객체의 이너텍스트 수정
+
+console.dir(title.id); //title 의 id 출력
+console.dir(title.className); //title 의 classname 출력
+
+## 3.2번 강의
+
+객체 이름을 정의 할 때는 보통 classname 을 쓰거나 title 과 같이 쓴다
+
+//3.2
+
+const hellos = document.getElementsByClassName("hello"); // classname 이 hello인 element 값을 가져와 변수 title 에 정의한다
+
+console.log(hellos);
+
+const title = document.getElementsByTagName("h1"); // tagname 이 h1인 element 값을 가져와 변수 title 에 정의한다
+
+console.log(title);
+
+const title = document.querySelector(".hello h1");//css 방식, 값이 없으면 null, 부합하는 객체가 여러개면 그중 첫번째 것을 가져옴
+
+querySelectorAll 은 조건에 부합하는 모든 객체를 가져옴
+
+console.log(title);
+
+document.querySelector("#hello");-- 같은 의미
+document.getElementById("hello");--
+
+## 3.3번 강의
+
+on~ : event
+
+const title = document.querySelector("div.hello:first-child h1");
+
+console.dir(title);
+
+title.Style.color = "blue"; // title 색상 설정
+
+JS에서는 주로 event를 처리 함
+
+click event listen
+
+<div class="hello">
+    <h1>Click me!</h1>
+</div>
+
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+console.log("title was clicked!");
+}
+
+title.addEventListener("click", handleTitleClick);
