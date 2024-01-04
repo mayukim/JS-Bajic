@@ -534,3 +534,23 @@ console.log("title was clicked!");
 }
 
 title.addEventListener("click", handleTitleClick);
+
+## 3.4번 강의
+
+const title = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() { //타이틀이 클릭되면
+    title.style.color = "blue"; //글자 색상 설정, JS에서 스타일을 변경할 순 있지만 CSS에서 변경하는 것이 좋음
+}
+
+function handleMouseEnter() { //타이틀로 마우스가 들어오면
+    title.innerText = "mouse is here!"; // 이너 텍스트 변경
+}
+
+function handleMouseLeave() { //마우스가 나가면
+    title.innerText = "mouse is gone!"; // 이너 텍스트 변경
+}
+
+title.addEventListener("click", handleTitleClick); //
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
