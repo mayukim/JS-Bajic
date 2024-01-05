@@ -617,4 +617,18 @@ h1.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 han
 
 ## 3.7번 강의
 
+//css는 style파일에서 작성
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+const clickedClass = "clicked";
+if (h1.className === "clickedClass") {
+h1.className = "";
+} else {
+h1.className = "clickedClass"; // classname 생성
+}
+}
+
+h1.addEventListener("click", handleTitleClick);
+
 ## 3.8번 강의

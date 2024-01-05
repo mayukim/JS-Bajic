@@ -365,13 +365,30 @@
 //3.7
 
 //css는 style파일에서 작성
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+// function handleTitleClick() {
+//     const clickedClass = "clicked";
+//     if (h1.className === "clickedClass") {
+//         h1.className = "";
+//     } else {
+//         h1.className = "clickedClass"; // classname 생성
+//     }
+// }
+
+// h1.addEventListener("click", handleTitleClick);
+
+//3.8
+
 const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    if (h1.className === "active") {
-        h1.className = "";
+    const clickedClass = "clicked";
+    if (h1.classList.contains(clickedClass)) {
+        // classname 으로 작업 할 수 있게 해줌
+        h1.classList.remove(clickedClass);
     } else {
-        h1.className = "active"; // classname 생성
+        h1.classList.add(clickedClass); // classname 생성
     }
 }
 
