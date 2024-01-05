@@ -284,20 +284,95 @@
 
 //3.4
 
-const title = document.querySelector("div.hello:first-child h1");
+// const title = document.querySelector("div.hello:first-child h1");
+
+// function handleTitleClick() {
+//     title.style.color = "blue";
+// }
+
+// function handleMouseEnter() {
+//     title.innerText = "mouse is here!";
+// }
+
+// function handleMouseLeave() {
+//     title.innerText = "mouse is gone!";
+// }
+
+// title.addEventListener("click", handleTitleClick);
+// title.addEventListener("mouseenter", handleMouseEnter);
+// title.addEventListener("mouseleave", handleMouseLeave);
+
+//3.5
+
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+// function handleTitleClick() {
+//     h1.style.color = "blue";
+// }
+
+// function handleMouseEnter() {
+//     h1.innerText = "mouse is here!";
+// }
+
+// function handleMouseLeave() {
+//     h1.innerText = "mouse is gone!";
+// }
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+// function handleWindowCopy() {
+//     alert("copier!");
+// }
+
+// function handleWindowOffline() {
+//     alert("SOS no WIFI");
+// }
+
+// function handleWindowOnline() {
+//     alert("good WIFI");
+// }
+
+// h1.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 handleTitleClick 실행
+// h1.addEventListener("mouseenter", handleMouseEnter);
+// h1.addEventListener("mouseleaee", handleMouseLeave);
+// // 이벤트 리스너는 후에 리무브가 가능
+
+// window.addEventListener("resize", handleWindowResize);
+// // document의 body, head, title 등은 중요하기 때문에 콘솔에서 불러올 수 있지만 다른 element들은 querySelector 이나 getElementByld 등을 사용해야 한다
+// window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
+
+//3.6
+
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+// function handleTitleClick() {
+//     const currentColor = h1.style.color;
+//     let newColor;
+//     if (currentColor === "blue") {
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     h1.style.color = newColor;
+// }
+
+// h1.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 handleTitleClick 실행
+
+//3.7
+
+//css는 style파일에서 작성
+const h1 = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() {
-    title.style.color = "blue";
+    if (h1.className === "active") {
+        h1.className = "";
+    } else {
+        h1.className = "active"; // classname 생성
+    }
 }
 
-function handleMouseEnter() {
-    title.innerText = "mouse is here!";
-}
-
-function handleMouseLeave() {
-    title.innerText = "mouse is gone!";
-}
-
-title.addEventListener("click", handleTitleClick);
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+h1.addEventListener("click", handleTitleClick);

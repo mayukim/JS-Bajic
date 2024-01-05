@@ -540,17 +540,81 @@ title.addEventListener("click", handleTitleClick);
 const title = document.querySelector("div.hello:first-child h1");
 
 function handleTitleClick() { //타이틀이 클릭되면
-    title.style.color = "blue"; //글자 색상 설정, JS에서 스타일을 변경할 순 있지만 CSS에서 변경하는 것이 좋음
+title.style.color = "blue"; //글자 색상 설정, JS에서 스타일을 변경할 순 있지만 CSS에서 변경하는 것이 좋음
 }
 
 function handleMouseEnter() { //타이틀로 마우스가 들어오면
-    title.innerText = "mouse is here!"; // 이너 텍스트 변경
+title.innerText = "mouse is here!"; // 이너 텍스트 변경
 }
 
 function handleMouseLeave() { //마우스가 나가면
-    title.innerText = "mouse is gone!"; // 이너 텍스트 변경
+title.innerText = "mouse is gone!"; // 이너 텍스트 변경
 }
 
-title.addEventListener("click", handleTitleClick); //
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
+title.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 handleTitleClick 실행
+title.addEventListener("mouseenter", handleMouseEnter); // 이벤트가 감지되면 handleMouseEnter 실행
+title.addEventListener("mouseleave", handleMouseLeave); // 이벤트가 감지되면 handleMouseLeave 실행
+
+## 3.5번 강의
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+h1.style.color = "blue";
+}
+
+function handleMouseEnter() {
+h1.innerText = "mouse is here!";
+}
+
+function handleMouseLeave() {
+h1.innerText = "mouse is gone!";
+}
+
+function handleWindowResize() {
+document.body.style.backgroundColor = "tomato";
+}
+
+function handleWindowCopy() {
+alert("copier!");
+}
+
+function handleWindowOffline() {
+alert("SOS no WIFI");
+}
+
+function handleWindowOnline() {
+alert("good WIFI");
+}
+
+h1.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 handleTitleClick 실행
+h1.addEventListener("mouseenter", handleMouseEnter);
+h1.addEventListener("mouseleaee", handleMouseLeave);
+// 이벤트 리스너는 후에 리무브가 가능
+
+window.addEventListener("resize", handleWindowResize);
+// document의 body, head, title 등은 중요하기 때문에 콘솔에서 불러올 수 있지만 다른 element들은 querySelector 이나 getElementByld 등을 사용해야 한다
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
+
+## 3.6번 강의
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+const currentColor = h1.style.color;
+let newColor;
+if (currentColor === "blue") {
+newColor = "tomato";
+} else {
+newColor = "blue";
+}
+h1.style.color = newColor;
+}
+
+h1.addEventListener("click", handleTitleClick); // 텍스트가 클릭되면 handleTitleClick 실행
+
+## 3.7번 강의
+
+## 3.8번 강의
