@@ -632,3 +632,17 @@ h1.className = "clickedClass"; // classname 생성
 h1.addEventListener("click", handleTitleClick);
 
 ## 3.8번 강의
+
+const h1 = document.querySelector("div.hello:first-child h1");
+
+function handleTitleClick() {
+    const clickedClass = "clicked";
+    if (h1.classList.contains(clickedClass)) {
+        // classname 으로 작업 할 수 있게 해줌
+        h1.classList.remove(clickedClass);
+    } else {
+        h1.classList.add(clickedClass); // classname 생성
+    }
+}
+
+h1.addEventListener("click", handleTitleClick);
